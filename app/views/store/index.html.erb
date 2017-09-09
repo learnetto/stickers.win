@@ -1,0 +1,28 @@
+<div class="product">
+  <h2>Pack of 5 stickers for $5</h2>
+  <h3>Free shipping anywhere in the world!</h3>
+  <div class="sticker">
+    <%= image_tag("https://s3-us-west-2.amazonaws.com/stickers.win/reactallthethings.png", alt: "REACT ALL THE THINGS") %>
+  </div>
+
+  <%= form_tag charges_path, class: "payment-form" do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button buy-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Pack of 5 stickers"
+            data-amount="500"
+            data-label="Buy Now"
+            data-billing-address="true"
+            data-shipping-address="true"
+            data-locale="auto"></script>
+  <% end %>
+
+</div>
+
