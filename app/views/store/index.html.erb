@@ -2,7 +2,7 @@
   <h2>Pack of 5 stickers for $5</h2>
   <h3>Free shipping anywhere in the world!</h3>
   <div class="sticker">
-    <%= image_tag("https://s3-us-west-2.amazonaws.com/stickers.win/reactallthethings.png", alt: "REACT ALL THE THINGS") %>
+    <%= image_tag("https://s3-us-west-2.amazonaws.com/stickers.win/reactallthethings_350x263.png", alt: "REACT ALL THE THINGS") %>
   </div>
 
   <%= form_tag charges_path, class: "payment-form" do %>
@@ -23,17 +23,19 @@
             data-shipping-address="true"
             data-locale="auto"></script>
   <% end %>
+</div>
 
-  <div class="faq">
-    <h2>FAQ</h2>
-    <h4>Are you really selling stickers?</h4>
-    <p>Yes! This is for real. Order a pack of stickers and I will ship it to you.</p>
+<div class="faq">
+  <h2>FAQ</h2>
+  <h4>Are you really selling stickers?</h4>
+  <p>Yes! This is for real. Order a pack of stickers and I will ship it to you.</p>
 
-    <h4>Why do you have only one sticker?</h4>
-    <p>More stickers coming shortly. Sign up to find out when they are ready to buy:</p>
+  <h4>Why do you have only one sticker?</h4>
+  <p>More stickers coming shortly. Sign up to find out when they are ready to buy:</p>
 
-    <p><%= render "shared/mailchimp" %></p>
-  </div>
+  <p><%= render "shared/mailchimp" %></p>
 
+  <h4>I want to make a store like this. Can you help me?</h4>
+  <p>Lucky you! <a href="https://learnetto.com/tutorials/the-11-minute-guide-to-building-and-launching-an-online-store-with-rails-stripe-checkout-and-heroku" style="text-decoration: underline;">I made a video</a> to show you how to do it.</p>
 </div>
 

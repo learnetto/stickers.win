@@ -1,7 +1,13 @@
 body {
-  font-family: sans-serif;
+  font-family: "Courier New";
   color: #333;
 }
+
+h1 {
+  font-weight: 400;
+  font-size: 3em;
+}
+
 
 a {
   color: #333;
@@ -13,9 +19,24 @@ a {
   margin: auto;
 }
 
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: dotted 1px #ccc;
+}
+
+.tagline {
+  font-family: "Courier New";
+}
+
+.product {
+  border: solid 1px yellow;
+  margin: auto;
+}
+
 .sticker {
   border: solid 1px #333;
-  width: 405px;
+  width: 355px;
   padding: 5px;
   img {
     border: solid 1px #ccc;
