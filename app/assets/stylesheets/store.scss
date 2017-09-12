@@ -15,7 +15,7 @@ a {
 
 .sticker {
   border: solid 1px #333;
-  width: 505px;
+  width: 405px;
   padding: 5px;
   img {
     border: solid 1px #ccc;
@@ -35,4 +35,18 @@ a {
 
 #error_explanation {
   color: red;
+}
+
+.subscribe-button {
+  background: hotpink;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer; 
+}
+
+.faq {
+  margin-top: 200px;
 }
