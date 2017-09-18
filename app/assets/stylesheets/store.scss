@@ -29,13 +29,65 @@ header {
   font-family: "Courier New";
 }
 
+
+.cart {
+  float: right;
+  padding: 10px;
+  background: rgba(255, 161, 161, 0.21);
+  text-align: right;
+  margin-top: 4px;
+  clear:both;
+}
+
+.product {
+  width: 100%;
+  height: 450px;
+  padding: 20px;
+  border-bottom: dotted 1px black;
+}
+
+.stickerContainer {
+  width: 365px;
+  float: left;
+}
+
 .sticker {
   border: solid 1px #333;
-  width: 355px;
   padding: 5px;
+
   img {
     border: solid 1px #ccc;
   }
+}
+
+.cartControls {
+  float: left;
+  margin-left: 20px;
+  font-size: 16px;
+  height: 100%;
+  padding-top: 140px;
+  box-sizing: border-box;
+
+  .cartCount {
+    padding: 6px 10px;
+
+  }
+  button {
+    width: 140px;
+    display: block;
+    padding: 6px 10px;
+    background: #333;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+}
+
+.price {
+  font-size: 20px;
+  text-align: center;
 }
 
 .payment-form {
@@ -65,11 +117,4 @@ header {
 
 .faq {
   margin-top: 200px;
-}
-
-.cart {
-  float: right;
-  padding: 10px;
-  background: rgba(255, 161, 161, 0.21);
-  text-align: right;
 }

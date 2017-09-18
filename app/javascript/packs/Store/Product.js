@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Sticker from './Sticker'
 
-const Product = ({product}) => 
-  <div className="product">
-    <h2>{product.name}</h2>
-    <h3>{product.caption}</h3>
-    <div className="sticker">
-      <img src={product.images[0]} alt={product.name} />
-    </div>
-    <h3>Free shipping anywhere in the world!</h3>
-  </div>
+class Product extends Component {
+  render () {
+    return(
+      <div className="product">
+        <Sticker product={this.props.product} />
+        <div className="cartControls">
+          <p className="price">${(this.props.product.skus.data[0].price/100).toFixed(2)}</p>
+          <button>+ Add to cart</button>
+          <button>- Remove from cart</button>
+        </div>
+      </div>
+    )
+  }
+}
 
 export default Product
