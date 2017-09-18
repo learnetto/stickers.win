@@ -1,24 +1,7 @@
-# README
+# stickers.win 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Learn how to build an online store built with React.js and Ruby on Rails 5.1](https://learnetto.com/tutorials/how-to-build-an-online-store-using-react-and-rails-part-1).
 
-Things you may want to cover:
+It uses the Stripe Orders API for storing product data, creating orders and charging customers.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Work in progress.
