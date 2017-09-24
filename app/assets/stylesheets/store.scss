@@ -29,7 +29,6 @@ header {
   font-family: "Courier New";
 }
 
-
 .cart {
   float: right;
   padding: 10px;
@@ -37,7 +36,12 @@ header {
   text-align: right;
   margin-top: 4px;
   clear:both;
+
+  button.StripeCheckout {
+    margin-left: 20px;
+  }
 }
+
 
 .product {
   width: 100%;

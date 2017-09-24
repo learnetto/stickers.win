@@ -1,19 +1,30 @@
 class ChargesController < ApplicationController
   def create
-    # Amount in cents
-    @amount = 500
-
-    customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
+    items = []
+    params[:cart][:items].each do |k, v|
+      items << { :type => 'sku', :parent => k, :quantity => v }
+    end
+    order = Stripe::Order.create(
+      :email => params[:email],
+      :currency => 'usd',
+      :items => items,
+      :shipping => {
+        :name => params[:card][:name],
+        :address => {
+          :city => params[:card][:address_city],
+          :country => params[:card][:address_country],
+          :line1  => params[:card][:address_line1],
+          :line2 => params[:card][:address_line2],
+          :state => params[:card][:address_state],
+          :postal_code => params[:card][:address_zip]
+        }
+      }
     )
 
-    charge = Stripe::Charge.create(
-      :customer    => customer.id,
-      :amount      => @amount,
-      :description => 'pack of 5 stickers',
-      :currency    => 'usd'
-    )
+    token = params[:id]
+    order.pay(:source => token)
+
+    render json: {message: "Thanks for your purchase. Your stickers are on the way!"}
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to :root
